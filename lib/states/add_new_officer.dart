@@ -79,11 +79,10 @@ class _AddNewOfficerState extends State<AddNewOfficer> {
                           .doc(uid)
                           .set(model.toMap())
                           .then((value) {
-                            AppService().readOfficerUser().then((value) {
-                              Get.back();
-                            });
-                          });
-
+                        AppService().readOfficerUser().then((value) {
+                          Get.back();
+                        });
+                      });
                     }).catchError((onError) {
                       AppSnackbar().normalSnackbar(
                           title: onError.code, detail: onError.message);

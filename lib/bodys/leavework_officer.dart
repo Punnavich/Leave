@@ -8,6 +8,7 @@ import 'package:leaveworkung/utility/app_service.dart';
 import 'package:leaveworkung/utility/app_snackbar.dart';
 import 'package:leaveworkung/widgets/widget_button.dart';
 import 'package:leaveworkung/widgets/widget_icon_button.dart';
+import 'package:leaveworkung/widgets/widget_logo.dart';
 import 'package:leaveworkung/widgets/widget_text.dart';
 
 class LeaveworkOfficer extends StatefulWidget {
@@ -28,6 +29,7 @@ class _LeaveworkOfficerState extends State<LeaveworkOfficer> {
           print('leaveModels ---> ${appController.leaveModels.length}');
           return ListView(
             children: [
+              const WidgetLogo(title: 'ระบบการลา'),
               appController.leaveModels.isEmpty
                   ? const SizedBox()
                   : Row(
@@ -160,10 +162,13 @@ class _LeaveworkOfficerState extends State<LeaveworkOfficer> {
                               .then((value) {
                             AppService()
                                 .processSendNoti(
-                                    token: appController.adminUserModels.last.token!, title: 'แจ้งเตือนมีการลา', body: 'ขออนุญาติลา โปรดอนุเคราะห์')
+                                    token: appController
+                                        .adminUserModels.last.token!,
+                                    title: 'แจ้งเตือนมีการลา',
+                                    body: 'ขออนุญาติลา โปรดอนุเคราะห์')
                                 .then((value) {
-                                  appController.indexBodyOfficer.value = 0;
-                                });
+                              appController.indexBodyOfficer.value = 0;
+                            });
                           });
                         }
                       },

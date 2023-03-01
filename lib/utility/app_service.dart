@@ -197,9 +197,9 @@ class AppService {
       appController.userModelLogins.add(model);
       if ((model.name.isEmpty) || (model.surname.isEmpty)) {
         AppDialog(context: context).normalDialog(
-            title: 'Please Complete You Profile',
+            title: 'ข้อมูลของคุณยังไม่เรียบร้อย',
             actionWidget: WidgetTextButton(
-              label: 'Go to Complete Profile',
+              label: 'กรุณากรอกข้อมูลเพื่อใช้งาน',
               pressFunc: () {
                 Get.offAll(const AddProfileOfficer());
               },

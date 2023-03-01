@@ -44,9 +44,12 @@ class _ListOfficerAdminState extends State<ListOfficerAdmin> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   WidgetText(
-                                      text: appController.userModels[index].email, textStyle: AppConstant().h2Style(size: 16),),
+                                    text: appController.userModels[index].email,
+                                    textStyle: AppConstant().h2Style(size: 16),
+                                  ),
                                   WidgetText(
-                                    text: appController.userModels[index].password,
+                                    text: appController
+                                        .userModels[index].password,
                                   )
                                 ],
                               ),

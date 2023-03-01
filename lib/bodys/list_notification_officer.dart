@@ -6,6 +6,6 @@ class ListNotificationOfficer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WidgetText(text: 'ListNotification');
+    return const WidgetText(text: 'ListNotification');
   }
 }

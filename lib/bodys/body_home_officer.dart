@@ -7,6 +7,7 @@ import 'package:leaveworkung/utility/app_constant.dart';
 import 'package:leaveworkung/utility/app_controller.dart';
 import 'package:leaveworkung/widgets/widget_icon_button.dart';
 import 'package:leaveworkung/widgets/widget_image_network.dart';
+import 'package:leaveworkung/widgets/widget_logo.dart';
 import 'package:leaveworkung/widgets/widget_text.dart';
 
 class BodyHomeOfficer extends StatefulWidget {
@@ -39,6 +40,7 @@ class _BodyHomeOfficerState extends State<BodyHomeOfficer> {
             print('newModels ---> ${appController.newsModels.length}');
             return ListView(
               children: [
+                const WidgetLogo(title: 'Home'),
                 appController.newsModels.isEmpty
                     ? const SizedBox()
                     : ImageSlideshow(
@@ -64,15 +66,17 @@ class _BodyHomeOfficerState extends State<BodyHomeOfficer> {
                             )
                             .toList(),
                         isLoop: true,
-                        // autoPlayInterval: 3000,
-                        height: boxConstraints.maxWidth * 0.6,
+                        autoPlayInterval: 3000,
+                        height: boxConstraints.maxWidth * 0.5,
                       ),
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const ScrollPhysics(),
                   itemCount: titles.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3),
+                      crossAxisSpacing: 5,
+                      childAspectRatio: 1.5,
+                      crossAxisCount: 2),
                   itemBuilder: (context, index) => Card(
                     child: Column(
                       children: [

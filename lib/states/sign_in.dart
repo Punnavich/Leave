@@ -101,8 +101,9 @@ class _SignInState extends State<SignIn> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    WidgetText(text: 'AMARIN Book\n      Center'),
+                    const WidgetText(text: 'AMARIN Book\n      Center'),
                   ],
                 ),
               ],
