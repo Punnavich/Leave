@@ -20,7 +20,7 @@ class WidgetLogo extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             const WidgetImage(
-              size: 48,
+              size: 100,
             ),
             WidgetText(
               text: AppConstant.appName,
@@ -29,7 +29,7 @@ class WidgetLogo extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          width: 8,
+          width: 1,
         ),
         WidgetText(
           text: title,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppConstant {
-  static String appName = 'AMARIN\n  Group';
-  static Color activeColor = Color.fromARGB(255, 156, 155, 223);
+  static String appName = '';
+  static Color activeColor = Color.fromARGB(255, 116, 114, 245);
 
   TextStyle h1Style({double? size, Color? color}) {
     return TextStyle(
